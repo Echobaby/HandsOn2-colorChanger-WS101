@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Activity 2 </title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: burlywood;
+            gap: 5rem;
+        }
+
+        #header-container {
+            font-size: 1.5rem;
+            width: 80%;
+            background-color: aqua;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 30px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #square {
+            height: 13rem;
+            width: 13rem;
+            border-radius: 30px;
+            border: 1px solid black;
+        }
+
+        .button-27 {
+            appearance: none;
+            background-color: #000000;
+            border: 2px solid #1A1A1A;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            min-height: 60px;
+            min-width: 0;
+            outline: none;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 100%;
+            will-change: transform;
+        }
+
+        .button-27:disabled {
+            pointer-events: none;
+        }
+
+        .button-27:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .button-27:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+
+        input[type='button'] {
+            width: 20%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="header-container">
+        <h1> JavaScript colorChange() Hands-On </h1>
+    </div>
+
+    <div id="square" style="background-color: green;"></div>
+
+    <input type="button" id="btn" class="button-27" value="Click Me!">
+
+
+    <script>
+
+        let square = document.getElementById('square');
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click', colorChange);
+
+        function colorChange() {
+            if (square.style.backgroundColor === 'green') {
+                square.style.backgroundColor = 'blue';
+            } else {
+                square.style.backgroundColor = 'green';
+            }
+        }
+
+    </script>
+</body>
+</html>
